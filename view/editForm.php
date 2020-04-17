@@ -7,7 +7,7 @@
 <div class="container">
 <h1>modifiez la recette</h1>
 
-    <form method="post" action="http://localhost/PHP-orientéObjet/exam/index.php?controller=recette&action=editRecette">
+    <form method="post" action="http://localhost/PHP-orientéObjet/exam/index.php?controller=recette&action=editRecette&id=<?php echo($recette->getId()) ?>">
         <label>Titre de la recette</label>
         <input name="titre" class="form-control" value="<?php echo($recette->getTitre()) ?>">
 

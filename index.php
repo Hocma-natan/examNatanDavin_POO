@@ -2,7 +2,6 @@
 include 'include.php';
 
 if($_GET['controller'] === 'default' && $_GET['action'] === 'home'){
-    echo('je passe par home');
     $recetteController = new DefaultController();
     $recetteController->home();
 }

@@ -54,13 +54,13 @@
             $ingredient = $recette->getIngredient();
             $titre = $recette->getTitre();
             $recepy = $recette->getRecette();
-            $file = $recette->getImage();
+            $image = $recette->getImage();
             $id = $recette->getId();
-            $requete = $this->bdd->prepare("UPDATE  raviole SET ingredient_principal =? , titre = ?, recette = ?, file = ? WHERE id = ?");
+            $requete = $this->bdd->prepare("UPDATE  raviole SET ingredient_principal =? , titre = ?, recette = ?, image = ? WHERE id = ?");
             $requete->bindParam(1, $ingredient);
             $requete->bindParam(2, $titre);
             $requete->bindParam(3, $recepy);
-            $requete->bindParam(4, $file);
+            $requete->bindParam(4, $image);
             $requete->bindParam(5, $id);
             $requete->execute();
         }
